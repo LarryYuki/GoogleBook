@@ -1,3 +1,3 @@
 module.exports = {
-  Todo: require("./googlebooks")
+  Gbook: require("./googlebooks")
 };

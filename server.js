@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const logger = require("morgan");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6001;
 const mongoose = require("mongoose");
-const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/deploy_todoDB";
-
+// const MONGO_URI =
+//   process.env.MONGODB_URI || "mongodb://localhost/deploy_todoDB";
+const MONGODB_URI=process.env.MONGODB_URI || "mongodb://localhost/Googlebook"
 mongoose
-  .connect(MONGO_URI, {
+  .connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false

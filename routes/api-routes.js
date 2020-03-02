@@ -23,7 +23,7 @@ router.post("/new", (req, res) => {
 });
 
 // router.patch("/update", (req, res) => {
-//   db.Gbook.findOneAndUpdate(
+//   db.Gbook.findOneAndUpdate(  
 //     { _id: req.query.id },
 //     { text: req.query.text }
 //   ).then(updatedTodo => {
