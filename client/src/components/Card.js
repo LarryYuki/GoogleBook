@@ -8,9 +8,9 @@ function Card(props) {
            <p>{props.everything.volumeInfo.authors}</p>
            <p>{props.everything.volumeInfo.description}</p>
            <a>{props.everything.selfLink}</a>
-           {props.everything.volumeInfo.imageLinks ? (<img style={{height:'100px', width: "100px"}}
+           {props.everything.volumeInfo.imageLinks ? (<img style={{height:'250px', width: "130px"}}
            src={props.everything.volumeInfo.imageLinks.thumbnail}></img> ) :"no image"}
-          <button onClick={
+          <button style={{height:'35px', width: "50px"}} onClick={
               ()=>{
                     API.saveBook({
                         title: props.everything.volumeInfo.title,
@@ -21,7 +21,7 @@ function Card(props) {
                     }).then(res => console.log(res)
                     )
               }
-          }></button>
+          }>Save</button>
         </div>
     )
     

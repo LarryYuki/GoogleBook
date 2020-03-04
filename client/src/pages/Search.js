@@ -17,7 +17,7 @@ function Search() {
             console.log(response.data.items)
         })
         }       , 
-            [getSearch]);
+           [getSearch] );
 
     return (
         <div> 
