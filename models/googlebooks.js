@@ -5,22 +5,23 @@ const GbookSchema = new Schema({
   title: {
     type: String,
     trim: true,
+    required: true,
   },
-  authors: {
+  authors: [{
     type: String,
-    default: true
-  },
+    required: true
+  }],
   description: {
     type: String,
-    default: true
+    required: true
   },
   image: {
     type:  String,
-    default: true
+    required: true
   },
   link: {
     type: String,
-    default: true
+    required: true
   },
 
 });

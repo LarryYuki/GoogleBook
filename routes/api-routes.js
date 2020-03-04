@@ -2,20 +2,30 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-router.get("/all", (req, res) => {
+router.get("/books", (req, res) => {
   db.Gbook.find().then(gbooks => {
     res.send(gbooks);
   });
 });
 
-router.get("/find/:id", (req, res) => {
+router.get("/books/:id", (req, res) => {
   db.Gbook.find({ _id: req.params.id }).then(foundbooks => {
     res.send(foundbooks);
   });
 });
 
-router.post("/new", (req, res) => {
-  db.Gbook.create({ text: req.body.text, complete: req.body.complete }).then(
+router.post("/books", (req, res) => {
+  console.log("POST")
+  db.Gbook.create({ 
+    title: req.body.title, 
+    authors: req.body.authors,
+    description: req.body.description,
+    image: req.body.image,
+    link: req.body.link,
+    
+    
+
+  }).then(
     newBook => {
       res.send(newBook);
     }

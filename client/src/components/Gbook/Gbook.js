@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../pages/API";
+import API from "../../utils/API";
 
 import React, { Component } from 'react'
 

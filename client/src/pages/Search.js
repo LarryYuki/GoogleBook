@@ -26,7 +26,7 @@ function Search() {
                 onChange={e => setSearch(e.target.value)}
                 
                 />
-                <button />
+                {/* <button /> */}
             This is search: {getSearch}
             {getresult?getresult.map(
                 (result,index)=>{
